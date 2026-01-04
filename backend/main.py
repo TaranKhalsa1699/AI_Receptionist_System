@@ -9,10 +9,15 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://ai-receptionist-system.vercel.app",
+        "https://ai-receptionist-system-git-main-taranpres-projects.vercel.app",
+        "http://localhost:5173",  # Local Development
+        "http://127.0.0.1:5173"   # Local Development alternative
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 @app.get("/")

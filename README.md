@@ -2,14 +2,12 @@
 
 An intelligent, secure, and deterministic chatbot for hospital patient intake. Built with React, FastAPI, LangGraph, and Supabase.
 
-![Hospital Reception](http://localhost:5173/)
-
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-receptionist-system.vercel.app)
 
 ## Features
 
 -   **Deterministic Triage**: Automatically routes patients to **General**, **Emergency**, or **Mental Health** wards based on symptoms.
--   **Strict Data Collection**: Enforces collection of Name, Age, and Query in a specific order.
+-   **Strict Data Collection**: Enforces collection of Name, Age, and Query to ensure complete records.
 -   **Secure Persistence**: Stores patient data in **Supabase (PostgreSQL)** using Row Level Security (RLS) bypass via Service Role.
 -   **Webhook Integration**: Triggers external workflows (e.g., Relay.app, Zapier) upon successful registration.
 -   **Full-Viewport UI**: Responsive, centered, and polished React interface.

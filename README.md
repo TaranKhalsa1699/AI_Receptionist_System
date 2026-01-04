@@ -2,7 +2,9 @@
 
 An intelligent, secure, and deterministic chatbot for hospital patient intake. Built with React, FastAPI, LangGraph, and Supabase.
 
-![Hospital Reception](https://via.placeholder.com/800x400?text=Hospital+AI+Receptionist)
+![Hospital Reception](http://localhost:5173/)
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-receptionist-system.vercel.app)
 
 ## Features
 

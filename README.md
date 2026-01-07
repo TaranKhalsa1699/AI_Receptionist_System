@@ -2,7 +2,7 @@
 
 An intelligent, secure, and deterministic chatbot for hospital patient intake. Built with React, FastAPI, LangGraph, and Supabase.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://ai-receptionist-system-a4vybhutb-taranpres-projects.vercel.app)
+
 
 ## Features
 

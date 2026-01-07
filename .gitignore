@@ -7,25 +7,39 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+.vite/
+.cache/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Python
+.env
+.env.local
+.env.development
+.env.production
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+ruff_cache/
+coverage/
+htmlcov/
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# OS
 .DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-
-# Security & Python
-.env
-.venv
-__pycache__/
-*.py[cod]
-*$py.class

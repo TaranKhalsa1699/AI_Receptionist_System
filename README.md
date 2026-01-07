@@ -12,6 +12,36 @@ An intelligent, secure, and deterministic chatbot for hospital patient intake. B
 -   **Webhook Integration**: Triggers external workflows (e.g., Relay.app, Zapier) upon successful registration.
 -   **Full-Viewport UI**: Responsive, centered, and polished React interface.
 
+## Security
+
+-   **No Hardcoded Secrets**: All keys are managed via environment variables.
+-   **Input Validation**: Strict Pydantic models for all data entry.
+-   **RLS**: Database policies configured for secure access.
+
+## Live Deployment
+
+The project is deployed with a separate backend and frontend.
+
+**Backend (FastAPI – Render)**
+👉 https://ai-receptionist-system.onrender.com/
+
+Opening this link wakes up the API server. You should see a basic response or API info page.
+
+**Frontend (Vite + React – Vercel)**
+👉 https://ai-receptionist-system.vercel.app/
+
+After the backend is awake, the chat works instantly.
+
+**Recommended Usage Flow**
+
+1. Open the backend link once to wake the server.
+2. Open the frontend link.
+3. Start chatting with the AI Receptionist.
+
+## License
+
+MIT
+
 ## Tech Stack
 
 -   **Frontend**: React, Vite, Axios

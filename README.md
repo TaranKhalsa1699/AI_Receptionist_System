@@ -2,7 +2,7 @@
 
 An intelligent, secure, and deterministic chatbot for hospital patient intake. Built with React, FastAPI, LangGraph, and Supabase.
 
-[![Live Demo](https://ai-receptionist-system-a4vybhutb-taranpres-projects.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://ai-receptionist-system-a4vybhutb-taranpres-projects.vercel.app)
 
 ## Features
 
@@ -19,6 +19,22 @@ An intelligent, secure, and deterministic chatbot for hospital patient intake. B
 -   **AI Logic**: LangGraph, OpenAI GPT-4
 -   **Database**: Supabase (PostgreSQL)
 
+## Project Structure
+
+```
+AI_Receptionist_System/
+├── backend/            # FastAPI server
+│   ├── main.py        # App entry point
+│   ├── graph.py       # LangGraph logic
+│   └── requirements.txt
+├── frontend/           # React application
+│   ├── src/
+│   │   ├── api.js     # API integration
+│   │   └── App.jsx    # Main UI
+│   └── package.json
+└── README.md
+```
+
 ## Getting Started
 
 ### Prerequisites
@@ -28,19 +44,23 @@ An intelligent, secure, and deterministic chatbot for hospital patient intake. B
 -   Supabase Account
 -   OpenAI API Key
 
-### Installation
+### Local Installation
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/yourusername/ai-hospital-receptionist.git
-    cd ai-hospital-receptionist
+    git clone https://github.com/TaranKhalsa1699/AI_Receptionist_System.git
+    cd AI_Receptionist_System
     ```
 
 2.  **Backend Setup**
     ```bash
     cd backend
     python -m venv .venv
-    source .venv/bin/activate  # Windows: .\.venv\Scripts\Activate.ps1
+    # Windows
+    .\.venv\Scripts\Activate.ps1
+    # Mac/Linux
+    source .venv/bin/activate
+    
     pip install -r requirements.txt
     ```
 
@@ -53,26 +73,41 @@ An intelligent, secure, and deterministic chatbot for hospital patient intake. B
     WEBHOOK_URL=https://...
     ```
 
-4.  **Database Setup**
-    Run the SQL script `database_setup.sql` in your Supabase SQL Editor to create the necessary tables.
+4.  **Frontend Setup**
+    ```bash
+    cd ../frontend
+    npm install
+    ```
 
-5.  **Run the Application**
+5.  **Run Locally**
     *Terminal 1 (Backend):*
     ```bash
     uvicorn main:app --reload
     ```
     *Terminal 2 (Frontend):*
     ```bash
-    cd frontend
-    npm install
     npm run dev
     ```
 
-## Security
+## Deployment
 
--   **No Hardcoded Secrets**: All keys are managed via environment variables.
--   **Input Validation**: Strict Pydantic models for all data entry.
--   **RLS**: Database policies configured for secure access.
+### Backend (Render/Railway)
+1.  Deploy the `backend` folder as a Python Web Service.
+2.  Build Command: `pip install -r requirements.txt`
+3.  Start Command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+4.  Add Environment Variables from your local `.env`.
+
+### Frontend (Vercel)
+1.  Import the repository.
+2.  Set Root Directory to `frontend`.
+3.  Add Environment Variable:
+    - `VITE_API_URL`: Your deployed backend URL (e.g., `https://your-app.onrender.com/chat`)
+
+## Troubleshooting
+
+-   **"Could not connect to server"**:
+    -   If using Render free tier, the backend may be sleeping. Open the backend URL in your browser (e.g., `/docs`) to wake it up.
+    -   Ensure `VITE_API_URL` is set correctly in Vercel settings.
 
 ## License
 
